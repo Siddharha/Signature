@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initialize();
-        gestureView.setGestureColor(Color.BLUE);
 
     }
 
@@ -72,11 +71,14 @@ public void clk(View view)
             bm.compress(Bitmap.CompressFormat.PNG, 100, os);
             os.close();
             Toast.makeText(getBaseContext(),"File Saved",Toast.LENGTH_SHORT).show();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
 
     }

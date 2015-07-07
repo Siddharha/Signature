@@ -16,12 +16,13 @@
              android:eventsInterceptionEnabled="true"
              android:fadeEnabled="false"
              android:gestureColor="#000000"
+             android:gestureStrokeWidth="2"
              android:gestureStrokeLengthThreshold="0.1"
              android:gestureStrokeType="multiple"
-             android:orientation="vertical" android:layout_alignParentBottom="true"
-             android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
-             android:layout_marginBottom="77dp"
-             android:fadeOffset="5000">
+             android:orientation="vertical"
+             android:fadeOffset="5000"
+             android:layout_above="@+id/linearLayout" android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true">
          </android.gesture.GestureOverlayView>
 
     <LinearLayout
@@ -29,10 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true" android:id="@+id/linearLayout">
         <Button
                  android:id="@+id/DoneButton"
-                 android:layout_width="wrap_content"
+                 android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:onClick="saveSig"
                  android:text="@string/Btn_done"
@@ -42,7 +43,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:gravity="right" android:padding="5dp"
-            android:background="#8e010101">
+            android:background="#8e010101" android:visibility="gone">
             <ImageView android:layout_width="32dp" android:layout_height="match_parent"
                        android:id="@+id/img1" android:background="#000001" android:onClick="clk" android:tag="1"/>
             <ImageView
